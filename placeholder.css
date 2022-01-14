@@ -1,25 +1,5 @@
 /*svg colors */
 
-#sky_day {
-  transform: rotate3d(0.2, 0.1, 0.2, 60deg);
-  animation: shake 2s cubic-bezier(.36, .07, .19, .97) infinite;
-}
-
-
-@keyframes shake {
-  0% {
-    transform: rotate3d(0.2, 0.1, 0.2, 0deg);
-  }
-
-  50% {
-    transform: rotate3d(1.8, 1.7, 1.8, 720deg);
-  }
-
-  100% {
-    transform: rotate3d(0.2, 0.1, 0.2, 0deg);
-  }
-}
-
 .cls-1 {
   fill: #e8f3e2;
 }
