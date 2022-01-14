@@ -1,12 +1,16 @@
 <template>
-  <div id="nav">
+  <nav class="bg-red-500">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
-  </div>
+  </nav>
   <router-view/>
 </template>
 
-<style lang="less">
+<style lang="postcss">
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,7 +19,7 @@
   color: #2c3e50;
 }
 
-#nav {
+nav {
   padding: 30px;
 
   a {
