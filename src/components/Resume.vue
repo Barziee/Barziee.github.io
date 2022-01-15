@@ -11,7 +11,7 @@
       sem rhoncus. Quisque ut diam id quam malesuada tempor nec eget ex. Etiam
       lectus purus, mattis sed lectus nec, luctus maximus dui. Proin ultricies
       convallis velit, a fermentum augue feugiat non. Suspendisse consectetur
-      lectus neque. Morbi at convallis odio, ac eleifend mauris.
+      lectus neque. Morbi at convallis odio, ac eleifend mauris
     </p>
   </div>
 </template>
