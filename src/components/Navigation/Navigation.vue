@@ -1,23 +1,37 @@
 <template>
   <nav
-    class="col-span-1 row-span-4 grid grid-cols-3 grid-rows-6 justify-items-center"
+    class="
+      col-span-1
+      row-span-4
+      grid grid-cols-3 grid-rows-6
+      justify-items-center
+    "
   >
     <div class="flex flex-col col-start-2 row-start-2">
-      <Link :to="'/'" :text="'About Me'" />
-      <Link :to="'/resume'" :text="'Resume'" />
+      <Link
+        v-for="(link, index) in links"
+        :to="link.to"
+        :text="link.text"
+        :key="index"
+      />
     </div>
   </nav>
 </template>
 
-//
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, readonly } from "vue";
 import Link from "./Link.vue";
+import links from "./links";
 
 export default defineComponent({
   name: "Navigation",
   components: {
     Link,
+  },
+  setup() {
+    return {
+      links: readonly(links),
+    };
   },
 });
 </script>
