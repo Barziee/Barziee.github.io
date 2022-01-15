@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>About me</h3>
+    <h3 class="font-bold">About me</h3>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum
       pharetra ante id pulvinar. Integer finibus nisi viverra feugiat aliquet.

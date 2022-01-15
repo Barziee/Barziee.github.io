@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 const colors = require("tailwindcss/colors");
 
 module.exports = {
@@ -18,7 +19,7 @@ module.exports = {
 
       black: colors.black,
       white: colors.white,
-      gray: colors.coolGray,
+      gray: colors.gray,
       red: colors.red,
       yellow: colors.amber,
       green: colors.emerald,
@@ -26,6 +27,18 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      orange: colors.orange,
+      teal: colors.teal,
+      cyan: colors.cyan,
+      lime: colors.lime,
+      theme1: "#EDF9FD",
+      theme2: "#D9F7FF",
+      theme3: "#C3EBFF",
+      theme4: "#A7D9F3",
+      theme5: "#8DC4ED",
+      theme6: "#82B9E3",
+      theme7: "#75A6E2",
+      theme8: "#628CE1",
     },
     spacing: {
       px: "1px",

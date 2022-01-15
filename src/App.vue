@@ -1,30 +1,20 @@
 <template>
-  <nav>
-    <router-link to="/">About me</router-link> |
-    <router-link to="/resume">Resume</router-link>
-  </nav>
-  <router-view />
+  <div class="bg-theme1 grid grid-cols-5 grid-rows-4 h-screen">
+    <Navigation />
+    <div class="bg-theme3 col-span-3 row-span-4">
+      <router-view />
+    </div>
+  </div>
 </template>
 
-<style lang="postcss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+import { defineComponent } from "vue";
+import Navigation from "@/components/Navigation/Navigation.vue";
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+export default defineComponent({
+  name: "App",
+  components: {
+    Navigation,
+  },
+});
+</script>
