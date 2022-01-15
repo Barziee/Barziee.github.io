@@ -1,9 +1,9 @@
 <template>
-  <nav class="bg-red-500">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <nav>
+    <router-link to="/">About me</router-link> |
+    <router-link to="/resume">Resume</router-link>
   </nav>
-  <router-view/>
+  <router-view />
 </template>
 
 <style lang="postcss">

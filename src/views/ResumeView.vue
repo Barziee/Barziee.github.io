@@ -1,17 +1,17 @@
 <template>
   <div>
-    <About />
+    <Resume />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import About from "@/components/About.vue";
+import Resume from "@/components/Resume.vue";
 
 export default defineComponent({
-  name: "AboutView",
+  name: "ResumeView",
   components: {
-    About,
+    Resume,
   },
 });
 </script>
