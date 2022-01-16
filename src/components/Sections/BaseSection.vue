@@ -1,13 +1,6 @@
 <template>
   <div
-    class="
-      text-gray-800 text-3xl
-      underline
-      font-bold
-      col-start-2
-      row-start-3
-      col-span-3
-    "
+    class="text-theme1 text-3xl underline font-bold col-start-2 row-start-3 col-span-3"
   >
     {{ title }}
   </div>
@@ -29,3 +22,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.underline {
+  text-underline-offset: 0.21em;
+}
+</style>

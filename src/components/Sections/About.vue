@@ -1,7 +1,7 @@
 <template>
   <BaseSection title="About Me">
     <template v-slot:section-body>
-      <p>
+      <p class="text-opacity-95 text-theme1">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum
         pharetra ante id pulvinar. Integer finibus nisi viverra feugiat aliquet.
         Vestibulum vel fermentum nisl. Maecenas libero leo, ornare eu velit at,

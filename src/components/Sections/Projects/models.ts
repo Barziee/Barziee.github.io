@@ -1,4 +1,4 @@
 export default interface IProject {
-  src: string,
-  alt: string,
+  src: string;
+  alt: string;
 }

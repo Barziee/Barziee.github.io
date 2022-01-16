@@ -1,30 +1,35 @@
 <template>
   <router-link :to="to" v-slot="{ href, navigate, isActive }" custom>
-    <a
+    <ActiveLink
       v-if="isActive"
-      class="border-l-4 border-theme6 rounded-sm pl-1 my-px"
       :href="href"
-      @click="navigate"
-      ><div class="text-theme7 animate-pulse">{{ text }}</div></a
-    >
-    <a v-else class="text-theme8 pl-2 my-px" :href="href" @click="navigate">{{
-      text
-    }}</a>
+      :text="text"
+      :navigate="navigate"
+    />
+    <InActiveLink v-else :href="href" :text="text" :navigate="navigate" />
   </router-link>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import ActiveLink from "./ActiveLink.vue";
+import InActiveLink from "./InActiveLink.vue";
 
 export default defineComponent({
   name: "Link",
   props: {
     text: {
       type: String,
+      required: true,
     },
     to: {
       type: String,
+      required: true,
     },
+  },
+  components: {
+    ActiveLink,
+    InActiveLink,
   },
 });
 </script>

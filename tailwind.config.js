@@ -31,14 +31,9 @@ module.exports = {
       teal: colors.teal,
       cyan: colors.cyan,
       lime: colors.lime,
-      theme1: "#EDF9FD",
-      theme2: "#D9F7FF",
-      theme3: "#C3EBFF",
-      theme4: "#A7D9F3",
-      theme5: "#8DC4ED",
-      theme6: "#82B9E3",
-      theme7: "#75A6E2",
-      theme8: "#628CE1",
+      theme1: "#dcdcdc",
+      theme2: "#8f8f8f",
+      theme3: "#434348",
     },
     spacing: {
       px: "1px",
@@ -264,6 +259,9 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        "Karla",
+        "Helvetica",
+        "Arial",
         "ui-sans-serif",
         "system-ui",
         "-apple-system",

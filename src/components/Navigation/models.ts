@@ -1,4 +1,4 @@
 export default interface ILink {
-    to: string,
-    text: string,
+  to: string;
+  text: string;
 }
