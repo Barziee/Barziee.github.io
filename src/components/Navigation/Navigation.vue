@@ -1,8 +1,8 @@
 <template>
   <nav
-    class="col-span-1 row-span-4 grid grid-cols-3 grid-rows-6 justify-items-center"
+    class="col-span-1 row-span-6 grid grid-cols-3 grid-rows-6 justify-items-center"
   >
-    <div class="flex flex-col col-start-2 row-start-2">
+    <div class="flex flex-col col-start-2 row-start-2 col-span-2 mt-24">
       <Link
         v-for="(link, index) in links"
         :to="link.to"

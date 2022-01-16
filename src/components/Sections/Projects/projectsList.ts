@@ -1,29 +1,67 @@
 import IProject from "./models";
 
+const TEXT_BG_OPACITY = 0.5;
+
 const projectsList: IProject[] = [
   {
-    src: require("@/assets/images/osamic.jpg"),
-    alt: "Osamic",
+    media: {
+      splash_src: require("@/assets/images/kindred_splash.png"),
+      full_media_src: require("@/assets/videos/kindred_preview.webp"),
+    },
+    label: {
+      text: "Kindred",
+      color: `rgba(102, 0, 255, ${TEXT_BG_OPACITY})`,
+    },
   },
   {
-    src: require("@/assets/images/Biden_san.jpg"),
-    alt: "Biden San",
+    media: {
+      splash_src: require("@/assets/images/kindred_splash.png"),
+      full_media_src: require("@/assets/videos/kindred_preview.webp"),
+    },
+    label: {
+      text: "Kindred",
+      color: `rgba(255, 102, 0, ${TEXT_BG_OPACITY})`,
+    },
   },
   {
-    src: require("@/assets/images/Buff_correll.jpg"),
-    alt: "Bufford Correll",
+    media: {
+      splash_src: require("@/assets/images/kindred_splash.png"),
+      full_media_src: require("@/assets/images/kindred_splash.png"),
+    },
+    label: {
+      text: "Kindred",
+      color: `rgba(102, 0, 255, ${TEXT_BG_OPACITY})`,
+    },
   },
   {
-    src: require("@/assets/videos/headbutt.webp"),
-    alt: "Headbutt",
+    media: {
+      splash_src: require("@/assets/images/kindred_splash.png"),
+      full_media_src: require("@/assets/images/kindred_splash.png"),
+    },
+    label: {
+      text: "Kindred",
+      color: `rgba(255, 102, 0, ${TEXT_BG_OPACITY})`,
+    },
   },
   {
-    src: require("@/assets/videos/trumpu.webp"),
-    alt: "Trumpu",
+    media: {
+      splash_src: require("@/assets/images/kindred_splash.png"),
+      full_media_src: require("@/assets/videos/kindred_preview.webp"),
+    },
+    label: {
+      text: "Kindred",
+      color: `rgba(102, 0, 255, ${TEXT_BG_OPACITY})`,
+    },
   },
   {
-    src: require("@/assets/videos/wide_putin.gif"),
-    alt: "Wide Putin",
+    media: {
+      splash_src: require("@/assets/images/kindred_splash.png"),
+      full_media_src: require("@/assets/videos/kindred_preview.webp"),
+    },
+    label: {
+      text: "Kindred",
+      color: `rgba(255, 102, 0, ${TEXT_BG_OPACITY})`,
+    },
   },
 ];
 export default projectsList;

@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-theme3 grid grid-cols-5 grid-rows-4 h-screen">
+  <div class="bg-theme3 grid grid-cols-9 grid-rows-4 h-screen">
     <Navigation />
-    <router-view class="col-span-3 row-span-4 grid grid-rows-12 grid-cols-5" />
+    <router-view class="col-span-8 row-span-4 grid grid-rows-12 grid-cols-8" />
   </div>
 </template>
 

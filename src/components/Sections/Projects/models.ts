@@ -1,4 +1,10 @@
 export default interface IProject {
-  src: string;
-  alt: string;
+  media: {
+    splash_src: string;
+    full_media_src: string;
+  };
+  label: {
+    text: string;
+    color: string;
+  };
 }

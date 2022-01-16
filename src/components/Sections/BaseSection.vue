@@ -1,10 +1,10 @@
 <template>
   <div
-    class="text-theme1 text-3xl underline font-bold col-start-2 row-start-3 col-span-3"
+    class="text-theme1 text-3xl underline font-bold col-start-2 row-start-3 col-span-6"
   >
     {{ title }}
   </div>
-  <div class="col-start-2 row-start-4 col-span-3">
+  <div class="col-start-2 row-start-4 col-span-6">
     <slot name="section-body"></slot>
   </div>
 </template>
