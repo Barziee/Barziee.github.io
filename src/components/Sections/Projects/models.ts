@@ -1,7 +1,13 @@
+interface IModalMedia {
+  type: 'video' | 'embed';
+  src: string;
+}
+
 export default interface IProject {
   media: {
-    splash_src: string;
-    full_media_src: string;
+    splashSrc: string;
+    fullMediaSrc: string;
+    modalMedia: IModalMedia;
   };
   label: {
     text: string;

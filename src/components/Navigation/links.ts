@@ -6,12 +6,12 @@ const links: ILink[] = [
     text: "About Me",
   },
   {
-    to: "/resume",
-    text: "Resume",
-  },
-  {
     to: "/projects",
     text: "Projects",
+  },
+  {
+    to: "/contact",
+    text: "Contact",
   },
 ];
 export default links;

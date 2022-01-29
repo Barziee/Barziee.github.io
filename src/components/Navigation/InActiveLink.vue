@@ -1,5 +1,5 @@
 <template>
-  <a class="text-theme2 pl-2 my-px text-xl" :href="href" @click="navigate">{{
+  <a class="text-theme2 pl-2 my-px text-3xl" :href="href" @click="navigate">{{
     text
   }}</a>
 </template>

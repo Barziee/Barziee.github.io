@@ -5,7 +5,7 @@
       class="border-theme2 pl-1 my-px active-link"
       :href="href"
       @click="navigate"
-      ><div class="text-theme1 text-xl">{{ text }}</div></a
+      ><div class="text-theme1 text-3xl">{{ text }}</div></a
     >
   </transition>
 </template>

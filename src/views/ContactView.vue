@@ -1,7 +1,7 @@
 <template>
   <BaseView>
     <template v-slot:view>
-      <Resume />
+      <Contact />
     </template>
   </BaseView>
 </template>
@@ -9,13 +9,13 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import BaseView from "./BaseView.vue";
-import Resume from "@/components/Sections/Resume.vue";
+import Contact from "@/components/Sections/Contact.vue";
 
 export default defineComponent({
-  name: "ResumeView",
+  name: "ContactView",
   components: {
     BaseView,
-    Resume,
+    Contact,
   },
 });
 </script>

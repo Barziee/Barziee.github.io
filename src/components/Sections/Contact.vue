@@ -1,5 +1,5 @@
 <template>
-  <BaseSection title="Resume">
+  <BaseSection title="Contact">
     <template v-slot:section-body>
       <div class="grid grid-cols-12">
         <p class="text-opacity-95 text-theme1 col-start-1 col-span-10">
@@ -25,7 +25,7 @@ import { defineComponent } from "vue";
 import BaseSection from "./BaseSection.vue";
 
 export default defineComponent({
-  name: "Resume",
+  name: "Contact",
   components: {
     BaseSection,
   },
