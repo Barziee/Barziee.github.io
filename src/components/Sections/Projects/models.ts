@@ -13,4 +13,5 @@ export default interface IProject {
     text: string;
     color: string;
   };
+  size: 'small' | 'large';
 }

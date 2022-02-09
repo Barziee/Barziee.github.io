@@ -1,22 +1,35 @@
 <template>
-  <div class="media">
+  <div
+    :class="{
+      'row-span-2': size === 'large',
+      'row-span-1': size === 'small',
+      media: true,
+      'col-span-1': true,
+    }"
+  >
     <img
       :src="src"
       :alt="labelText"
       @mouseover="onHover"
       @mouseout="outHover"
-      @click="showModal = true"
+      @click="openModal"
+      :class="{
+        vertical: size === 'large',
+        horizontal: size === 'small',
+      }"
     />
     <div
-      class="
-        w-full
-        text text-theme1
-        font-bold
-        media-title
-        flex
-        justify-center
-        align-center
-      "
+      :class="{
+        'w-full': true,
+        text: true,
+        'text-theme1': true,
+        'font-bold': true,
+        flex: true,
+        'justify-center': true,
+        'align-center': true,
+        'media-title-vertical': size === 'large',
+        'media-title-horizontal': size === 'small',
+      }"
       :style="{ 'background-color': labelColor }"
     >
       <p class="m-auto">{{ labelText }}</p>
@@ -36,9 +49,12 @@
       role="dialog"
     >
       <div class="grid grid-rows-12 h-full">
-        <div class="row-start-1 row-span-1 grid grid-cols-7">
-          <h1 class="text-3xl col-start-4 mt-3">{{ labelText }}</h1>
-          <button @click="showModal = false" class="close-btn col-start-7">
+        <div class="row-start-1 row-span-1 grid grid-cols-12">
+          <h1 class="text-3xl col-start-6 col-span-2 mt-3">{{ labelText }}</h1>
+          <button
+            @click="showModal = false"
+            class="close-btn col-start-12 col-span-1"
+          >
             x
           </button>
         </div>
@@ -53,8 +69,8 @@
               allowfullscreen
             ></iframe>
           </div>
-          <div v-if="modalMeditaType === 'video'" class="h-full">
-            <video width="320" height="240" controls class="m-auto">
+          <div v-if="modalMeditaType === 'video'" class="h-full flex">
+            <video controls autoplay class="m-auto video">
               <source :src="modalMediaSrc" type="video/mp4" />
             </video>
           </div>
@@ -89,6 +105,7 @@ export default defineComponent({
     const labelColor = projectObj.value.label.color;
     const modalMeditaType = projectObj.value.media.modalMedia.type;
     const modalMediaSrc = projectObj.value.media.modalMedia.src;
+    const size = projectObj.value.size;
     const timeoutId: Ref<number> = ref(0);
     return {
       src,
@@ -98,6 +115,7 @@ export default defineComponent({
       showModal: ref(false),
       modalMeditaType,
       modalMediaSrc,
+      size,
     };
   },
   methods: {
@@ -109,6 +127,15 @@ export default defineComponent({
     outHover() {
       this.src = this.projectObj.media.splashSrc;
       clearTimeout(this.timeoutId);
+    },
+    openModal() {
+      this.showModal = true;
+      this.$nextTick(() => {
+        const video = document.getElementsByTagName("video")[0];
+        if (video) {
+          video.volume = 0.1;
+        }
+      });
     },
   },
 });
@@ -130,10 +157,26 @@ export default defineComponent({
   cursor: pointer;
 }
 
-.media-title {
+.media-title-horizontal {
   position: absolute;
   bottom: 0;
-  height: 19%;
+  height: 18%;
+}
+
+.media-title-vertical {
+  position: absolute;
+  bottom: 0;
+  height: 9%;
+}
+
+.vertical {
+  height: 400px;
+  width: 220px;
+}
+
+.horizontal {
+  height: 190px;
+  width: 340px;
 }
 
 .modal {
@@ -145,8 +188,8 @@ export default defineComponent({
   left: 0;
   margin: auto;
   text-align: center;
-  height: 65%;
-  width: 40%;
+  height: 90%;
+  width: 48%;
   border-radius: 1rem;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   z-index: 999;
@@ -179,6 +222,13 @@ export default defineComponent({
 
 .close-btn:hover {
   background-color: #b7b7b7;
+}
+
+.video {
+  width: auto;
+  max-width: 70%;
+  height: auto;
+  max-height: 100%;
 }
 
 .summary {

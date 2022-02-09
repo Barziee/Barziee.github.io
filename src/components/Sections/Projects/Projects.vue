@@ -14,7 +14,7 @@
       </div>
       <div class="grid grid-cols-12">
         <div
-          class="col-start-1 col-span-10 grid grid-cols-3 gap-4 justify-items-start"
+          class="col-start-1 col-span-10 grid grid-cols-3 gap-4 grid-rows-2 justify-items-start"
         >
           <Project
             v-for="(project, index) in projectList"
