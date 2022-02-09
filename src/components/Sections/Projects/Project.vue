@@ -133,7 +133,7 @@ export default defineComponent({
       this.$nextTick(() => {
         const video = document.getElementsByTagName("video")[0];
         if (video) {
-          video.volume = 0.1;
+          video.volume = 0.03;
         }
       });
     },

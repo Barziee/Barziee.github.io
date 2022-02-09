@@ -75,7 +75,7 @@ const projectsList: IProject[] = [
       },
     },
     label: {
-      text: "Kindred",
+      text: "Acolyte",
       color: DEFAULT_LABEL_COLOR,
     },
     size: 'small',
