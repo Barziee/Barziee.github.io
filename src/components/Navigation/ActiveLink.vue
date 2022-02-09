@@ -56,3 +56,4 @@ export default defineComponent({
   border-left-width: 2px;
 }
 </style>
+
