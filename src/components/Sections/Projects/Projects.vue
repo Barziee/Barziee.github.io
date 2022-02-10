@@ -3,13 +3,7 @@
     <template v-slot:section-body>
       <div class="grid grid-cols-12">
         <p class="text-theme1 mb-8 col-span-10">
-          His palms spaghetti, knees weak, arms spaghetti There's vomit on his
-          sweater spaghetti, mom's spaghetti He's nervous, but on the surface he
-          looks calm spaghetti to drop bombs, But he keeps on spaghetti what he
-          wrote down, The whole crowd goes spaghetti He opens his mouth, but
-          spaghetti won't come out He's choking how, everybody's joking now
-          spaghetti run out, time's up, over, bloah! Snap back to spaghetti, Oh
-          there goes spaghetti Oh, there goes spaghetti, bloah
+          Here are some of the games I've created.
         </p>
       </div>
       <div class="grid grid-cols-12">
