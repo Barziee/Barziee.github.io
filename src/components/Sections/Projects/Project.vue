@@ -79,7 +79,11 @@
           </div>
         </div>
         <div class="row-start-10 row-span-2 text-sm">
-          <p class="summary text-section mt-10" v-html="context"></p>
+          <p class='mt-6 text-base underline'>My Roles:</p>
+          <div class='flex flex-row justify-center gap-2 mt-1'>
+            <p class='border-2 border-solid border-gray-700 p-1 rounded-lg' v-for='(role, index) in roles' :key='`role-${index}`'>{{ role }}</p>
+          </div>
+          <p class="summary text-section mt-6" v-html="context"></p>
           <a v-if="playLink" class="underline mt-6" :href="playLink"><font-awesome-icon
                 class="text-gray-600 mr-1"
                 :icon="['fas', 'gamepad']"
@@ -116,6 +120,7 @@ export default defineComponent({
     const summary = projectObj.value.summary;
     const context = projectObj.value.context;
     const playLink = projectObj.value.playLink;
+    const roles = projectObj.value.roles;
     return {
       src,
       labelText,
@@ -128,6 +133,7 @@ export default defineComponent({
       summary,
       context,
       playLink,
+      roles,
     };
   },
   methods: {
