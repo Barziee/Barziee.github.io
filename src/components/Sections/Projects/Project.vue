@@ -50,7 +50,7 @@
     >
       <div class="grid grid-rows-12 h-full">
         <div class="row-start-1 row-span-1 grid grid-cols-12">
-          <h1 class="text-3xl col-start-6 col-span-2 mt-3">{{ labelText }}</h1>
+          <h1 class="text-2xl col-start-6 col-span-2 mt-5 font-semi-bold">{{ labelText }}</h1>
           <button
             @click="showModal = false"
             class="close-btn col-start-12 col-span-1"
@@ -58,8 +58,11 @@
             x
           </button>
         </div>
-        <p class="row-start-2 row-span-1">Yampampampampamasdasdsad</p>
-        <div class="row-start-3 row-span-7">
+        <p
+          class="row-start-2 row-span-1 text-section m-auto text-sm mt-2"
+          v-html="summary"
+        ></p>
+        <div class="row-start-3 row-span-7 mt-12">
           <div v-if="modalMeditaType === 'embed'" class="h-full">
             <iframe
               class="iframe m-auto"
@@ -75,10 +78,13 @@
             </video>
           </div>
         </div>
-        <p class="row-start-11 row-span-2 summary">
-          pam pam pam pam pam pam pam pam pam pam pam pam pam pam pam pam pam
-          pam pam pam pam pam pam pam pam pam pam pam pam pam
-        </p>
+        <div class="row-start-10 row-span-2 text-sm">
+          <p class="summary text-section mt-10" v-html="context"></p>
+          <a v-if="playLink" class="underline mt-6" :href="playLink"><font-awesome-icon
+                class="text-gray-600 mr-1"
+                :icon="['fas', 'gamepad']"
+              />Play {{ labelText }}</a>
+        </div>
       </div>
     </div>
   </transition>
@@ -107,6 +113,9 @@ export default defineComponent({
     const modalMediaSrc = projectObj.value.media.modalMedia.src;
     const size = projectObj.value.size;
     const timeoutId: Ref<number> = ref(0);
+    const summary = projectObj.value.summary;
+    const context = projectObj.value.context;
+    const playLink = projectObj.value.playLink;
     return {
       src,
       labelText,
@@ -116,6 +125,9 @@ export default defineComponent({
       modalMeditaType,
       modalMediaSrc,
       size,
+      summary,
+      context,
+      playLink,
     };
   },
   methods: {
@@ -142,6 +154,10 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.text-section {
+  max-width: 80%;
+}
+
 .media {
   opacity: 0.7;
   transition: all 0.5s;

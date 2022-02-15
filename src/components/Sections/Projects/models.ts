@@ -14,4 +14,8 @@ export default interface IProject {
     color: string;
   };
   size: 'small' | 'large';
+  summary: string;
+  context: string;
+  playLink?: string;
+  roles: string[];
 }
