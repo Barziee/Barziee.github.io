@@ -3,6 +3,11 @@ interface IModalMedia {
   src: string;
 }
 
+export interface IRole {
+  text: string;
+  icon: string;
+}
+
 export default interface IProject {
   media: {
     splashSrc: string;
@@ -17,5 +22,5 @@ export default interface IProject {
   summary: string;
   context: string;
   playLink?: string;
-  roles: string[];
+  roles: IRole[];
 }

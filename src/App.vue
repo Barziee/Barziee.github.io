@@ -17,6 +17,14 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+html, body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#app {
+  font-family: 'Montserrat', sans-serif;
+}
 p {
   line-height: 1.8em;
 }

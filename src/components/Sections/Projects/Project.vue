@@ -22,7 +22,7 @@
       :class="{
         'w-full': true,
         text: true,
-        'text-theme1': true,
+        'text-white': true,
         'font-bold': true,
         flex: true,
         'justify-center': true,
@@ -30,7 +30,7 @@
         'media-title-vertical': size === 'large',
         'media-title-horizontal': size === 'small',
       }"
-      :style="{ 'background-color': labelColor }"
+      :style="{ 'background-color': labelColor, opacity: '90%' }"
     >
       <p class="m-auto">{{ labelText }}</p>
     </div>
@@ -49,45 +49,54 @@
       role="dialog"
     >
       <div class="grid grid-rows-12 h-full">
-        <div class="row-start-1 row-span-1 grid grid-cols-12">
-          <h1 class="text-2xl col-start-6 col-span-2 mt-5 font-semi-bold">{{ labelText }}</h1>
+        <div
+          class="row-start-1 row-span-1 grid grid-cols-11 text-white"
+          :style="{ 'background-color': labelColor, opacity: '90%' }"
+        >
+          <h1 class="text-3xl col-start-5 col-span-3 mt-6 font-bold">
+            {{ labelText }}
+          </h1>
           <button
             @click="showModal = false"
-            class="close-btn col-start-12 col-span-1"
+            class="col-start-11 col-span-1 text-right"
           >
-            x
+            <font-awesome-icon
+              class="text-white text-3xl mr-6 mt-1"
+              :icon="['fas', 'xmark']"
+            />
           </button>
         </div>
         <p
-          class="row-start-2 row-span-1 text-section m-auto text-sm mt-2"
+          class="row-start-2 row-span-2 text-section mx-auto mt-6"
           v-html="summary"
         ></p>
-        <div class="row-start-3 row-span-7 mt-12">
+        <div class="row-start-4 row-span-1">
+          <Roles :roles=roles />
+        </div>
+        <div class="row-start-5 row-span-6 mt-12">
           <div v-if="modalMeditaType === 'embed'" class="h-full">
             <iframe
               class="iframe m-auto"
               :src="modalMediaSrc"
               frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
           </div>
           <div v-if="modalMeditaType === 'video'" class="h-full flex">
-            <video controls autoplay class="m-auto video">
+            <video controls class="m-auto video">
               <source :src="modalMediaSrc" type="video/mp4" />
             </video>
           </div>
         </div>
-        <div class="row-start-10 row-span-2 text-sm">
-          <p class='mt-6 text-base underline'>My Roles:</p>
-          <div class='flex flex-row justify-center gap-2 mt-1'>
-            <p class='border-2 border-solid border-gray-700 p-1 rounded-lg' v-for='(role, index) in roles' :key='`role-${index}`'>{{ role }}</p>
-          </div>
-          <p class="summary text-section mt-6" v-html="context"></p>
-          <a v-if="playLink" class="underline mt-6" :href="playLink"><font-awesome-icon
-                class="text-gray-600 mr-1"
-                :icon="['fas', 'gamepad']"
-              />Play {{ labelText }}</a>
+        <div class="row-start-11 row-span-2">
+          <p class="summary text-section mt-6 mb-6" v-html="context"></p>
+          <a v-if="playLink" class="underline mt-12 text-2xl" :href="playLink"
+            ><font-awesome-icon
+              class="text-gray-600 mr-1"
+              :icon="['fas', 'gamepad']"
+            />Play {{ labelText }}</a
+          >
         </div>
       </div>
     </div>
@@ -97,11 +106,15 @@
 <script lang="ts">
 import { defineComponent, ref, Ref, toRefs } from "vue";
 import IProject from "./models";
+import Roles from "./Roles.vue";
 
 const fullMediaDelay = 100;
 
 export default defineComponent({
   name: "Project",
+  components: {
+    Roles,
+  },
   props: {
     projectObj: {
       type: Object as () => IProject,
@@ -168,13 +181,11 @@ export default defineComponent({
   opacity: 0.7;
   transition: all 0.5s;
   position: relative;
-  border: 1px solid #818181;
   z-index: 2;
 }
 .media:hover {
   opacity: 1;
   transform: scale(1.15);
-  border: 1px solid #eaeaea;
   z-index: 3;
   cursor: pointer;
 }
@@ -212,7 +223,6 @@ export default defineComponent({
   text-align: center;
   height: 90%;
   width: 48%;
-  border-radius: 1rem;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   z-index: 999;
   transform: none;
@@ -235,15 +245,6 @@ export default defineComponent({
 .iframe {
   height: 100%;
   width: 57%;
-}
-
-.close-btn {
-  background-color: #c9c9c9;
-  border-top-right-radius: 1rem;
-}
-
-.close-btn:hover {
-  background-color: #b7b7b7;
 }
 
 .video {

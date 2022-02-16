@@ -1,5 +1,5 @@
 <template>
-  <BaseSection title="Projects">
+  <BaseSection title="Games">
     <template v-slot:section-body>
       <div class="grid grid-cols-12">
         <p class="text-theme1 mb-8 col-span-10">
@@ -8,7 +8,7 @@
       </div>
       <div class="grid grid-cols-12">
         <div
-          class="col-start-1 col-span-10 grid grid-cols-3 gap-4 grid-rows-2 justify-items-start"
+          class="col-start-1 col-span-10 grid grid-cols-3 gap-y-4 gap-x-8 grid-rows-2 justify-items-start"
         >
           <Project
             v-for="(project, index) in projectList"
