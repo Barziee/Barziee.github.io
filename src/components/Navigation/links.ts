@@ -7,7 +7,7 @@ const links: ILink[] = [
   },
   {
     to: "/projects",
-    text: "Projects",
+    text: "Games",
   },
   {
     to: "/contact",

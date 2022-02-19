@@ -2,8 +2,8 @@
   <BaseSection title="Games">
     <template v-slot:section-body>
       <div class="grid grid-cols-12">
-        <p class="text-theme1 mb-8 col-span-10">
-          Here are some of the games I've created.
+        <p class="text-theme1 mb-8 col-span-10 text-2xl">
+          Here are some of the games I've made, using Unity.
         </p>
       </div>
       <div class="grid grid-cols-12">

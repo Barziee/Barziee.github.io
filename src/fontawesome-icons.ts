@@ -8,7 +8,9 @@ import {
   faWandMagicSparkles,
   faPuzzlePiece,
   faCode,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin, faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 const icons: IconDefinition[] = [
   faFilePdf,
@@ -18,6 +20,10 @@ const icons: IconDefinition[] = [
   faWandMagicSparkles,
   faPuzzlePiece,
   faCode,
+  faEnvelope,
+  faGithub,
+  faLinkedin,
+  faDiscord,
 ];
 
 icons.forEach((icon: IconDefinition) => library.add(icon));

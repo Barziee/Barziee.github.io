@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="col-span-1 row-span-6 grid grid-cols-3 grid-rows-6 justify-items-center"
+    class="col-span-2 row-span-6 grid grid-cols-3 grid-rows-6"
   >
     <div class="flex flex-col gap-2 col-start-2 row-start-2 col-span-2 mt-24">
       <Link
