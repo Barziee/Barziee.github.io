@@ -71,7 +71,7 @@
           v-html="summary"
         ></p>
         <div class="row-start-4 row-span-1">
-          <Roles :roles=roles />
+          <Roles :roles="roles" />
         </div>
         <div class="row-start-5 row-span-6 mt-12">
           <div v-if="modalMeditaType === 'embed'" class="h-full">
@@ -91,7 +91,11 @@
         </div>
         <div class="row-start-11 row-span-2">
           <p class="summary text-section mt-6 mb-6" v-html="context"></p>
-          <a v-if="playLink" class="underline mt-12 text-2xl" :href="playLink"
+          <a
+            v-if="playLink"
+            class="underline mt-12 text-2xl"
+            :href="playLink"
+            target="_blank"
             ><font-awesome-icon
               class="text-gray-600 mr-1"
               :icon="['fas', 'gamepad']"
